@@ -16,7 +16,7 @@ window.onload = async () => {
     document.getElementById("subscribe").onclick = () => {
         const email = document.getElementById("email").value;
 
-        fetch(process.env.API_URL, {
+        fetch("***REMOVED***", {
             method: 'POST',
             body: email,
             headers: {

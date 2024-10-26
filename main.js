@@ -11,6 +11,20 @@ window.onload = async () => {
     const forcastElement = document.createElement("h3");
     forcastElement.append(`Min: ${forcast.min}\tMax: ${forcast.max}`);
 
-    document.body.append(forcastElement);
+    document.body.prepend(forcastElement);
+
+    document.getElementById("subscribe").onclick = () => {
+        const email = document.getElementById("email").value;
+
+        fetch(process.env.API_URL, {
+            method: 'POST',
+            body: email,
+            headers: {
+                "Content-Type": "text/plain",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, HEAD, OPTIONS"
+            }
+        })
+    }
 
 };

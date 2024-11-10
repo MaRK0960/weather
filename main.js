@@ -1,3 +1,5 @@
+var API = "https://localhost:7000/subscribe";
+
 window.onload = async () => {
 
     const forcast =
@@ -16,15 +18,9 @@ window.onload = async () => {
     document.getElementById("subscribe").onclick = () => {
         const email = document.getElementById("email").value;
 
-        fetch("***REMOVED***", {
+        fetch(API, {
             method: 'POST',
-            body: email,
-            headers: {
-                "Content-Type": "text/plain",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, HEAD, OPTIONS"
-            }
+            body: email
         })
     }
-
 };

@@ -1,9 +1,10 @@
 var API = "https://localhost:7000/subscribe";
+var WeatherAPI = "https://api.weatherapi.com/v1/forecast.json?key=ce9fa4640f164e42a61200442241910&q=Ismailia&days=1&aqi=no&alerts=no";
 
 window.onload = async () => {
 
     const forcast =
-        await fetch("https://api.weatherapi.com/v1/forecast.json?key=ce9fa4640f164e42a61200442241910&q=Ismailia&days=1&aqi=no&alerts=no")
+        await fetch(WeatherAPI)
             .then(res => res.json())
             .then(res => {
                 const day = res.forecast.forecastday[0].day;

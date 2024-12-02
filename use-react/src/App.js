@@ -7,7 +7,7 @@ function CurrentWeather() {
   const { isPending, error, data } = useQuery({
     queryKey: ['currentWeather'],
     queryFn: () =>
-      fetch('https://api.weatherapi.com/v1/forecast.json?key=ce9fa4640f164e42a61200442241910&q=Ismailia&days=1&aqi=no&alerts=no')
+      fetch(process.env.REACT_APP_WeatherAPI)
         .then(res => res.json())
         .then(res => {
           const day = res.forecast.forecastday[0].day;
@@ -34,7 +34,7 @@ function CurrentWeather() {
 function Subscribe() {
   const mutation = useMutation({
     mutationFn: newEmail => {
-      return fetch("https://localhost:7000/subscribe",
+      return fetch(process.env.REACT_APP_API,
         {
           method: 'POST',
           body: newEmail

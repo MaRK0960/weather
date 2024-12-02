@@ -24,15 +24,65 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Input field styling */
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+/* Input field on focus */
+input[type="email"]:focus {
+  border-color: #76C7FA;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  background-color: #76C7FA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #58A1D3;
+  transform: translateY(-2px);
+}
+
+/* Button click effect */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .subscribe-container {
+    padding: 20px;
+  }
+
+  input[type="email"],
+  button {
+    width: 100%;
   }
 }

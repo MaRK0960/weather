@@ -14,16 +14,23 @@ export default function Subscribe() {
     })
 
     const [email, setEmail] = useState('');
+    const [subscribeResult, setSubscribeResult] = useState('');
 
     function subscribe() {
-        mutation.mutate(email);
+        if (email) {
+            mutation.mutate(email, {
+                onSuccess: () => setSubscribeResult('✓'),
+                onError: () => setSubscribeResult('✕')
+            });
+        }
     }
 
     return (
         <div>
             <input id="email" type="email" onChange={e => setEmail(e.target.value)} placeholder="Enter your email" required />
 
-            <button id="subscribe" role="none" onClick={subscribe}>Subscribe</button>
+            <button id="subscribe" role="none" onClick={subscribe} disabled={!email}>Subscribe</button>
+            <span>{subscribeResult}</span>
         </div>
     );
 }

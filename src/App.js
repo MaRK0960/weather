@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import CurrentWeather from './Components/CurrentWeather';
-import Subscribe from './Components/Subscribe';
+import Subscribe from './Components/Subscribe/Subscribe';
 
 export default function App() {
   return (

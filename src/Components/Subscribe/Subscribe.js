@@ -23,7 +23,7 @@ export default function Subscribe() {
 
     const [email, setEmail] = useState('');
     const [deltaTemperature, setDeltaTemperature] = useState(1);
-    const [notificationTime, setNotificationTime] = useState('09:00');
+    const [notificationTime, setNotificationTime] = useState('12:00');
 
     const [subscribeResult, setSubscribeResult] = useState('');
 
@@ -50,7 +50,7 @@ export default function Subscribe() {
 
             <div>
                 <label>Notification Time</label>
-                <input type="time" value={notificationTime} onChange={e => setNotificationTime(e.target.value)} />
+                <input type="time" step="3600" value={notificationTime} onChange={e => setNotificationTime(e.target.value)} />
             </div>
 
             <div>

@@ -5,6 +5,12 @@ import { useState } from "react";
 export default function Subscribe() {
     const mutation = useMutation({
         mutationFn: newEmail => {
+            const time = notificationTime.split(':');
+
+            const date = new Date();
+            date.setSeconds(0);
+            date.setMinutes(Number(time[1]));
+            date.setHours(Number(time[0]));
             return fetch(process.env.REACT_APP_API,
                 {
                     headers: {
@@ -14,7 +20,7 @@ export default function Subscribe() {
                     body: JSON.stringify({
                         Email: newEmail,
                         DeltaTemperature: deltaTemperature,
-                        NotificationTime: [`${notificationTime}:00`]
+                        NotificationTime: [`${date.getUTCHours()}:${date.getUTCMinutes()}:00`]
                     })
                 }
             )

@@ -11,6 +11,10 @@ export default function Subscribe() {
             date.setSeconds(0);
             date.setMinutes(Number(time[1]));
             date.setHours(Number(time[0]));
+
+            const formatedHours = date.getUTCHours().toLocaleString(undefined, { minimumIntegerDigits: 2 });
+            const formatedMinutes = date.getUTCMinutes().toLocaleString(undefined, { minimumIntegerDigits: 2 });
+
             return fetch(process.env.REACT_APP_API,
                 {
                     headers: {
@@ -20,7 +24,7 @@ export default function Subscribe() {
                     body: JSON.stringify({
                         Email: newEmail,
                         DeltaTemperature: deltaTemperature,
-                        NotificationTime: [`${date.getUTCHours()}:${date.getUTCMinutes()}:00`]
+                        NotificationTime: [`${formatedHours}:${formatedMinutes}:00`]
                     })
                 }
             )

@@ -47,21 +47,25 @@ export default function Subscribe() {
     }
 
     return (
-        <div>
-            <div>
-                <label>Email</label>
-                <input type="email" onChange={e => setEmail(e.target.value)} required />
+        <div className="subscribe-container">
+            <h3>Join Us</h3>
+            <div className="subscribe-fields">
+                <div>
+                    <label>Email</label>
+                    <input type="email" onChange={e => setEmail(e.target.value)} required />
+                </div>
+
+                <div>
+                    <label>Delta Temperature</label>
+                    <input type="number" value={deltaTemperature} onChange={e => setDeltaTemperature(e.target.value)} />
+                </div>
+
+                <div>
+                    <label>Notification Time</label>
+                    <input type="time" step="3600" value={notificationTime} onChange={e => setNotificationTime(e.target.value)} />
+                </div>
             </div>
 
-            <div>
-                <label>Delta Temperature</label>
-                <input type="number" value={deltaTemperature} onChange={e => setDeltaTemperature(e.target.value)} />
-            </div>
-
-            <div>
-                <label>Notification Time</label>
-                <input type="time" step="3600" value={notificationTime} onChange={e => setNotificationTime(e.target.value)} />
-            </div>
 
             <div>
                 <button role="none" onClick={subscribe} disabled={!email}>Subscribe</button>

@@ -1,36 +1,54 @@
-/* Input field styling */
-input[type="email"] {
-    width: 100%;
+.subscribe-container {
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    margin: auto;
+    width: 60%;
+}
+
+.subscribe-container .subscribe-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-fields div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    margin-bottom: 25px;
+}
+
+.subscribe-container input {
     padding: 12px;
-    margin-bottom: 16px;
-    border: 2px solid #ddd;
+    margin: 16px;
+    border: 3px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     color: #333;
     transition: border-color 0.3s;
 }
 
-/* Input field on focus */
-input[type="email"]:focus {
-    border-color: #76C7FA;
+input:focus {
+    border-color: rgb(128, 133, 195);
     outline: none;
 }
 
-/* Button styling */
 button {
     padding: 12px 24px;
-    background-color: #76C7FA;
+    background-color: var(--main-color);
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+    margin: 50px;
     transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Button hover effect */
 button:hover {
-    background-color: #58A1D3;
+    background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
 

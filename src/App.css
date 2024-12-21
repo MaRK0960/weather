@@ -1,10 +1,38 @@
+:root {
+  --main-color: rgb(119 124 204);
+  --secondary-color: rgb(77 79 112 / 48%);
+  /*rgba(119, 125, 204, 0.481)*/
+}
+
+::selection {
+  color: black;
+  background: var(--main-color);
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(40px + 2vmin);
+  padding-top: 40px;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
+  margin-right: 55px;
+}
+
+.App-header code {
+  color: var(--main-color);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,16 +41,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 @keyframes App-logo-spin {
   from {

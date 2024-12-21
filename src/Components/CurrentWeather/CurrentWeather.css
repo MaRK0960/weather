@@ -1,0 +1,58 @@
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 220px;
+}
+
+.temp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid var(--main-color);
+    width: 25%;
+    padding: 10px;
+    margin: 50px 25px;
+    background-color: var(--secondary-color);
+}
+
+.temp-card div {
+    display: flex;
+    font-size: 48px;
+    align-items: center;
+}
+
+.temp-card .max-min-temp {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.temp-card .max-min-temp p {
+    margin: 0;
+}
+
+.temp-card div p:nth-child(2) {
+    color: rgba(255, 255, 255, 0.663);
+}
+
+.temp-card div sup {
+    font-size: 22px;
+    margin-right: 25px;
+    color: var(--main-color);
+}
+
+.temp-card .time {
+    font-size: 28px;
+    color: var(--main-color);
+}
+
+.temp-card img {
+    width: 60px;
+    height: fit-content;
+}
+
+.temp-card img.moon {
+    width: 50px;
+}

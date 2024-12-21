@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CurrentWeather from './Components/CurrentWeather';
+import CurrentWeather from './Components/CurrentWeather/CurrentWeather';
 import Subscribe from './Components/Subscribe/Subscribe';
 
 export default function App() {
@@ -10,13 +10,13 @@ export default function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <p>
-          Welcome to our <code>Khtfa Weather App</code>!!!
+          Welcome to our <code>Khtfa Weather App</code>
         </p>
 
+      </header>
         <CurrentWeather></CurrentWeather>
 
         <Subscribe></Subscribe>
-      </header>
     </div>
   );
 }

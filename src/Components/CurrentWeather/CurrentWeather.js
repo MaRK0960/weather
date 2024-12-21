@@ -37,8 +37,8 @@ export default function CurrentWeather() {
                     <p>{data.current}<sup>°C</sup></p>
                     {currTime &&
                         (currTime.getHours() >= 5 && currTime.getHours() < 17) ?
-                        <img src="/sun.png" /> :
-                        <img className="moon" src="/moon2.png" />
+                        <img src="/sun.png" alt="day" /> :
+                        <img className="moon" src="/moon2.png" alt="night" />
                     }
                 </div>
                 {currTime && <p className="time">{currTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>}
@@ -49,7 +49,7 @@ export default function CurrentWeather() {
                         <p>{data.max}<sup>°C</sup></p>
                         <p>{data.min}<sup>°C</sup></p>
                     </div>
-                    <img src="/day-and-night.png" />
+                    <img src="/day-and-night.png" alt="day-and-night" />
                 </div>
                 {currTime && <p className="time">{currTime.toLocaleDateString()}</p>}
             </div>
